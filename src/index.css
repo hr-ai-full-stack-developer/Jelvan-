@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+:root {
+  --cream: #efefc9;
+  --cream-light: #f7f7e3;
+  --charcoal: #1c1c1a;
+  --luxury: #141412;
+}
+
+:root.dark {
+  --cream: #141412;
+  --cream-light: #1c1c1a;
+  --charcoal: #f0f0d8;
+  --luxury: #0c0c0b;
+}
+
+@theme {
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+  --color-cream: var(--cream);
+  --color-cream-light: var(--cream-light);
+  --color-charcoal: var(--charcoal);
+  --color-luxury: var(--luxury);
+}
+
+/* Custom premium scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(28, 28, 26, 0.15);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(28, 28, 26, 0.3);
+}
+
+body {
+  background-color: var(--cream);
+  color: var(--charcoal);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Global transitions to make theme switching extremely elegant and seamless */
+div, aside, header, h1, h2, h3, h4, h5, h6, p, button, a, span, input, select, textarea, kbd {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Dark mode class overrides */
+.dark .bg-white {
+  background-color: var(--cream-light) !important;
+}
+
+.dark .bg-white\/75 {
+  background-color: rgba(28, 28, 26, 0.75) !important;
+}
+
+.dark .bg-white\/50 {
+  background-color: rgba(28, 28, 26, 0.5) !important;
+}
+
+.dark .bg-white\/40 {
+  background-color: rgba(28, 28, 26, 0.4) !important;
+}
+
+.dark .bg-white\/10 {
+  background-color: rgba(255, 255, 255, 0.05) !important;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: rgba(240, 240, 216, 0.15);
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: rgba(240, 240, 216, 0.3);
+}

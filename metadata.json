@@ -1,0 +1,6 @@
+{
+  "name": "JELVAN® Portfolio",
+  "description": "Premium modern SaaS developer portfolio and AI workspace dashboard for Jelvan Ricolcol.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
